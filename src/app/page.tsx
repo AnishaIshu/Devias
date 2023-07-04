@@ -17,6 +17,8 @@ export default function Home() {
       <div>
         <SideBar />
       </div>
+
+      
       <div className='w-full xl:pl-72 '>
         <Navbar />
         <div className='lg:mx-10 xl:mx-28'>
