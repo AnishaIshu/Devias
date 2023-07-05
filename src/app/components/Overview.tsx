@@ -48,8 +48,7 @@ const Overview = () => {
   return (
 <div key={index} className=" shadow-md bg-white w-full md:w-[32%] pt-8 rounded-xl my-5">
         <div className="flex items-start pl-10 gap-5">
-        <Image src={item.img} className='m-auto' width={50} height={50} alt="" /> 
-
+        <Image src={item.img} width={50} height={30} alt="" />
         <div>
           <h6 className="text-[14px] text-[#6C737F] font-medium">{item.h1}</h6>
           <h1 className="text-4xl Jakarta font-bold pb-7">{item.h6}</h1>
