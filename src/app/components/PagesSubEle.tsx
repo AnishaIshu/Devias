@@ -2,14 +2,15 @@
 import Image from "next/image";
 import React from "react";
 import { useState } from "react";
-import { IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowDown } from "react-icons/io";
 
 
 const PagesSubEle: any = ({ pagesData }: { pagesData: any }) => {
     const [dropDown, setDropdown] = useState(false);
+    const [dropDownIcon, setDropdownIcon] = useState(false)
     const dataList = () => {
     setDropdown(!dropDown);
-    console.log(dropDown);
+    setDropdownIcon(!dropDownIcon)
   };
 
 
@@ -44,7 +45,9 @@ const PagesSubEle: any = ({ pagesData }: { pagesData: any }) => {
             </h1>
           </div>
         </div>
-        <div className=' text-[#9ca3af] mr-4'>{pagesData.icon}</div>
+        <div className=' text-[#9ca3af] mr-4'>
+           {dropDownIcon ?  <IoIosArrowDown /> : <div>{pagesData.icon}</div>}
+        </div>
 </div>
 {pagesData?.sub?.map((ele: any, index: number) => {
     return (
@@ -53,7 +56,7 @@ const PagesSubEle: any = ({ pagesData }: { pagesData: any }) => {
 <div onClick={nestedData} className="flex items-center justify-between my-1 px-3 hover:bg-[#303848] rounded-lg py-1  cursor-pointer">
     <h1 className="text-[#9ca3af] pl-8 py-2 text-[13px]  font-semibold text-left rounded-md ">{ele.authName}</h1>
      <div className="text-[#9ca3af] ">
-        {ele.arrow}
+     {dropDownIcon ? <div>{ele.arrow}</div> : <IoIosArrowDown /> }   
      </div>
 
 </div>

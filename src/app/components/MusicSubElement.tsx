@@ -1,11 +1,15 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
+import { IoIosArrowDown } from "react-icons/io";
+
 
 const MusicSubElement:any = ({ musicData }: { musicData: any}) => {
  
     const [levelDropDown, setLevelDropDown] = useState(false);
+    const [dropDownIcon, setDropdownIcon] = useState(false)
     const levelData = () => {
         setLevelDropDown(!levelDropDown);
+        setDropdownIcon(!dropDownIcon)
     }
 
     const [nestedList, setNestedList] = useState(false)
@@ -35,8 +39,10 @@ const MusicSubElement:any = ({ musicData }: { musicData: any}) => {
             className={`text-white ${musicData.nColor} text-[13px] rounded-full ml-20 font-semibold px-2 py-[2px]`}
           >
             {musicData.nName}
+          </div >
+          <div className='text-[#9ca3af]'>
+          {dropDownIcon ?  <IoIosArrowDown /> : <div>{musicData.icon}</div>}
           </div>
-             <div className=' text-[#9ca3af] mr-4'>{musicData.icon}</div>
            </div>
 
            {musicData?.sub?.map((ele: any, index: number) => {
@@ -45,7 +51,7 @@ const MusicSubElement:any = ({ musicData }: { musicData: any}) => {
                    {levelDropDown ?    
                     <div className="flex items-center justify-between px-6 my-1 hover:bg-[#303848] rounded-lg py-1 cursor-pointer">
                 <h1 className="text-[#9ca3af] py-1 pl-8 text-[13px]  font-semibold text-left rounded-md cursor-pointer">{ele.levelName}</h1>
-                <div onClick={handleList} className='text-[#9ca3af]'>{ele.arrow}
+                <div onClick={handleList} className='text-[#9ca3af]'>
                 </div>
              </div> : ""}
               </div>

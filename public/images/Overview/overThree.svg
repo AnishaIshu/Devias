@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="102px" height="111px" viewBox="0 0 102 111" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>iconly-glass-paper</title>
-    <defs>
+    <title>iconly-glass-paper</title> 
+     <defs>
         <linearGradient x1="25.0126345%" y1="11.1701835%" x2="81.2232254%" y2="80.6344021%" id="linearGradient-1">
             <stop stop-color="#FFFFFF" stop-opacity="0.25" offset="0%"></stop>
             <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"></stop>

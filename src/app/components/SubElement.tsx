@@ -3,14 +3,18 @@
 import Image from "next/image";
 import React from "react";
 import { useState } from "react";
+import { IoIosArrowDown } from 'react-icons/io';
 
 const SubElement:any = ({ conceptData }: { conceptData: any }) => {
   // conceptMap dropdown list
   const [dropDown, setDropdown] = useState(false);
+  const [dropdownIcon, setDropdownIcon] = useState(false)
   const dataDrop = () => {
     setDropdown(!dropDown);
-    console.log(dropDown);
+    setDropdownIcon(!dropdownIcon);
   };
+
+  
 
   console.log(conceptData?.sub);
   return (
@@ -32,7 +36,10 @@ const SubElement:any = ({ conceptData }: { conceptData: any }) => {
               </h1>
             </div>
           </div>
-          <div className='text-[#9ca3af]'>{conceptData.icon}</div>
+           <div className='text-[#9ca3af]'>
+           {dropdownIcon ?  <IoIosArrowDown /> : <div>{conceptData.icon}</div>}
+           </div>
+          
         </div>
 
         {conceptData?.sub?.map((ele: any, index: number) => {
