@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className='flex justify-between w-[100%] px-7 mt-5'>
         <div
           title='Search'
-          className=' hover:bg-zinc-100 cursor-pointer w-10 px-[7px] py-[7px] rounded-full'
+          className=' hover:bg-zinc-100 cursor-pointer w-10 px-[7px] py-[7px] rounded-full '
         >
           <RiSearchLine className='text-2xl text-zinc-500 cursor-pointer ml-14 xl:ml-0' />
         </div>

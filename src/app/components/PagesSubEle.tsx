@@ -11,6 +11,15 @@ const PagesSubEle: any = ({ pagesData }: { pagesData: any }) => {
     setDropdown(!dropDown);
     console.log(dropDown);
   };
+
+
+
+  const [nested, setNested] = useState(false);
+  const nestedData = () => {
+     setNested(!nested) 
+  }
+
+
   console.log(pagesData?.sub);
 
   return (
@@ -19,7 +28,7 @@ const PagesSubEle: any = ({ pagesData }: { pagesData: any }) => {
    
       <div
         onClick={dataList}
-        className='flex items-center justify-between py-2 rounded-md pr-2 cursor-pointer my-2'
+        className='flex items-center justify-between py-2 rounded-md hover:bg-[#303848] pr-2 cursor-pointer my-2'
       >
         <div className='flex gap-5'>
           <Image
@@ -39,40 +48,43 @@ const PagesSubEle: any = ({ pagesData }: { pagesData: any }) => {
 </div>
 {pagesData?.sub?.map((ele: any, index: number) => {
     return (
-<>
+<div key={index}>
 {dropDown &&
-<div key={index} className="flex items-center justify-between my-1">
-    <h1 className="text-[#9ca3af] pl-8 py-2 text-[13px]  font-semibold text-left rounded-md cursor-pointer ">{ele.authName}</h1>
-     <div className="text-[#9ca3af]">
+<div onClick={nestedData} className="flex items-center justify-between my-1 px-3 hover:bg-[#303848] rounded-lg py-1  cursor-pointer">
+    <h1 className="text-[#9ca3af] pl-8 py-2 text-[13px]  font-semibold text-left rounded-md ">{ele.authName}</h1>
+     <div className="text-[#9ca3af] ">
         {ele.arrow}
      </div>
+
 </div>
     }
-</>
+   {nested? <NestedPageEle  key={index} pagesData = {ele?.sub}/> :''} 
+</div>
     )
 })}
-
-      
-      </div>
-
-
-    
+</div>
     </>
   );
 };
+export default PagesSubEle;
 
 // nested dropdown
 
-// const [nested, setNested] = useState(false);
-// const handleNestList = () => {
-//         setNested(!nested);
-//         console.log(nested);
-//     }
+export  function NestedPageEle({pagesData}:any) {
+     
+  return (
+    <div>
 
-//     return (
-//         <div>
-            
-//         </div>
-//     )
+      {pagesData?.map((elem: any, index: number) => {
+        return(
+          <div key={index} >
+          <div className="flex items-center pl-10 justify-between my-1 hover:bg-[#303848] rounded-lg py-1">
+          <h1 className="text-[#9ca3af] pl-8 py-1 text-[13px]  font-semibold text-left rounded-md cursor-pointer">{elem}</h1>
+        </div> 
+         </div> 
+        )
+      })}
+    </div>
+  )
+}
 
-export default PagesSubEle;

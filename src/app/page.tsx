@@ -13,13 +13,13 @@ import HelpCenter from "./components/HelpCenter";
 
 export default function Home() {
   return (
-    <main className='flex bg-neutral-50 pb-10'>
+    <main className='flex bg-neutral-50'>
       <div>
         <SideBar />
       </div>
 
       
-      <div className='w-full xl:pl-72 '>
+      <div className='w-full xl:pl-72 h-screen overflow-y-auto pb-16'>
         <Navbar />
         <div className='lg:mx-10 xl:mx-28'>
           <Overview />
@@ -32,7 +32,7 @@ export default function Home() {
                   <Inbox />
                 </div>
                 <div className="md:flex w-full md:flex-row flex-col">
-                   {/* <Transition /> */}
+                   <Transition />
                    <UpcommingEvent />
                 </div>
                 <div className="md:flex w-full md:flex-row flex-col">

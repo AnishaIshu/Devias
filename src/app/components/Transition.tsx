@@ -61,32 +61,34 @@ const transitionData = [
         </div> 
 
 
+<div className='w-[100%] overflow-x-auto'>
+
 
 
 {transitionData.map((data, index)=> {
     return(
 
-        <div key={index} className='flex items-center justify-between border-t py-5 px-10 cursor-pointer hover:bg-zinc-100'>
-            <div className='flex items-center gap-10'>
-            <div className='bg-zinc-200 w-10 text-center rounded-2xl py-2'>
+        <div key={index} className='flex items-center justify-between w-[100%] border-t py-5 px-3 md:px-10  cursor-pointer hover:bg-zinc-100'>
+            <div className='flex items-center gap-4 md:gap-10'>
+            <div className='bg-zinc-200 w-10 text-center rounded-2xl px-1 py-2'>
                 <h1 className='text-sm'>JUL</h1>
                 <h1 className='font-semibold text-xl'>{data.date}</h1>
             </div>
             <div>
-                <h1 className='text-[17px] font-semibold text-slate-600'>{data.name}</h1>
-                <p className='text-[15px] font-medium text-slate-500'>{data.p}</p>
+                <h1 className='text-[14px] sm:text-[17px] font-semibold text-slate-600'>{data.name}</h1>
+                <p className='text-[12px] sm:text-[15px] font-medium text-slate-500'>{data.p}</p>
             </div>
             </div>
 
-            <div className={`${data.bgColor} ${data.text} px-3 py-1 text-center text-[13px] rounded-full font-semibold`}>
+            <div className={`${data.bgColor} ${data.text} px-2 py-1 text-center text-[10px] sm:text-[14px] rounded-full font-semibold`}>
        {data.hold}   
         </div> 
 
-        <div className={`${data.priceColor} w-24 text-center text-[14px] rounded-full font-semibold`}>{data.price}</div> 
+        <div className={`${data.priceColor} w-24 text-center text-[10px] sm:text-[14px] rounded-full font-semibold`}>{data.price}</div> 
         </div> 
     )
 })}
-
+</div>
 
     </div> 
     </>

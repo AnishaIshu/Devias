@@ -11,6 +11,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 import { RxCross2 } from "react-icons/rx";
 import SubElement from "./SubElement";
 import PagesSubEle from "./PagesSubEle";
+import MusicSubElement from "./MusicSubElement";
 
 const SideBar = () => {
   const overview = [
@@ -196,9 +197,7 @@ const SideBar = () => {
     {
       id: 5,
       img: "/images/sideBar/pages/error.svg",
-      name: "Error",
-      icon: <IoIosArrowForward />,
-      sub: ["401", "404", "500"],
+      name: "Error"
     },
   ];
 
@@ -293,7 +292,7 @@ const pageData = () => {
       {show ? (
         ""
       ) : (
-        <div className='sideBarColor  w-72 pt-6 pl-5 pr-6 pb-5 absolute z-10 top-0 left-0  h-screen overflow-y-auto scrollBarDesign'>
+        <div className='sideBarColor  w-72 pt-6 pl-5 pr-6 pb-5 absolute z-10 top-0 left-0 h-screen overflow-y-auto scrollBarDesign'>
 
           {/* CLOSE ICON */}
           <div>
@@ -327,11 +326,11 @@ const pageData = () => {
           <div>
             {overview.map((item, index) => {
               return (
-                <>
+                <div  key={index}>
                   <div
                     className={`flex pl-3 py-2 hover:bg-[#303848] rounded-md gap-4 cursor-pointer mb-[2px] ${item.bgColor} py-2`}
                   >
-                    <div key={index}>
+                    <div>
                       <Image
                         src={item.img}
                         className=''
@@ -353,7 +352,7 @@ const pageData = () => {
                       {item.nName}
                     </div>
                   </div>
-                </>
+                </div>
               );
             })}
           </div>
@@ -396,37 +395,15 @@ const pageData = () => {
               MISC
             </h1>
             {music.map((musicData, index) => {
-              return (
-                <>
-                  <div
-                    key={index}
-                    className='flex justify-between items-center py-2 rounded-md hover:bg-[#303848] pr-2 cursor-pointer  my-2'
-                  >
-                    <div className='flex gap-5'>
-                      <Image
-                        src={musicData.img}
-                        className='ml-3'
-                        width={21}
-                        height={25}
-                        alt=''
-                      />
-                      <div>
-                        <h1 className='text-[14px] text-[#9ca3af] font-semibold text-left'>
-                          {musicData.name}
-                        </h1>
-                      </div>
-                    </div>
-                    <div
-                      className={`text-white ${musicData.nColor} text-[13px] rounded-full ml-20 font-semibold px-2 py-[2px]`}
-                    >
-                      {musicData.nName}
-                    </div>
-                    <div className=' text-[#9ca3af] mr-4'>{musicData.icon}</div>
-                  </div>
-                </>
+              return ( 
+                <MusicSubElement key={index} musicData = {musicData}/>
+             
               );
             })}
           </div>
+
+
+
 
           {/* ******************************************** */}
 
