@@ -1,7 +1,10 @@
+"use client"
 import Image from "next/image";
 import React from "react";
 import { AiOutlinePlus } from 'react-icons/ai';
 import { IoMdArrowForward } from 'react-icons/io';
+import { motion } from 'framer-motion';
+
 
 const Overview = () => {
   const overviewData = [
@@ -48,7 +51,13 @@ const Overview = () => {
   return (
 <div key={index} className="boxShadow bg-white w-full md:w-[32%] pt-8 rounded-xl my-5">
         <div className="flex items-start pl-10 gap-5">
+        <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
         <Image src={item.img} width={50} height={30} alt="" />
+        </motion.div>
         <div>
           <h6 className="text-[14px] text-[#6C737F] font-medium">{item.h1}</h6>
           <h1 className="text-4xl Jakarta font-bold pb-7">{item.h6}</h1>

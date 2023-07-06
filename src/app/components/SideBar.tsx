@@ -1,4 +1,5 @@
 "use client";
+import { motion } from 'framer-motion'; 
 import Image from "next/image";
 import React from "react";
 import { useState } from "react";
@@ -305,6 +306,11 @@ const pageData = () => {
 
           <div className='flex items-center justify-between pb-5'>
             <div className='border-[1px] border-zinc-700 w-10 h-10 mt-1 ml-1 rounded-md'>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+            >
               <Image
                 src='/images/logo/logo.svg'
                 className='p-[4px]'
@@ -312,6 +318,7 @@ const pageData = () => {
                 height={30}
                 alt=''
               />
+               </motion.div>
             </div>
             <div className='pr-16'>
               <h1 className='text-white text-lg font-bold'>Devias</h1>
@@ -369,7 +376,7 @@ const pageData = () => {
            <SubElement key={index} conceptData = {conceptData}/>
               );
             })}
-          </div>
+          </div>  
 
           {/* ******************************************** */}
 

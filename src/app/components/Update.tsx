@@ -1,12 +1,22 @@
+"use client"
+
 import Image from 'next/image'
 import React from 'react'
+import { motion } from 'framer-motion';
+
 
 const Update = () => {
   return (
     <>
     <div className='md:flex boxShadow md:flex-row flex-col items-center gap-10 md:w-[60%] mx-3 mt-5 py-10 px-10 rounded-3xl shadow-sm bg-[#e9ecfa]'>
         <div>
+        <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.4 }}
+            >
       <Image src="/images/update/personStanding.png" className='m-auto' width={200} height={100} alt="" /> 
+      </motion.div>
         </div>
         <div>
             <h6 className='text-xs text-[#7173e8] font-semibold'>NEW V6 UPDATE</h6>
