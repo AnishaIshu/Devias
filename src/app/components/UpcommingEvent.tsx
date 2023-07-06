@@ -38,7 +38,7 @@ const UpcommingEvent = [
 
   return (
     <>
-     <div className='bg-[#fff] mt-8 shadow-md mx-3 md:w-[45%] rounded-3xl'>
+     <div className='bg-[#fff] mt-8 boxShadow mx-3 md:w-[45%] rounded-3xl'>
         <div className='pt-6'>
            <h1 className='text-[18px] font-semibold text-slate-800 pl-8 pt-5'>Upcoming events</h1>
            <p className='text-[15px] font-medium text-slate-500 pl-8'>Based on the linked bank accounts</p>

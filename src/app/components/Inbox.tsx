@@ -48,7 +48,7 @@ const Inbox = () => {
 
   return (
     <>
-      <div className='bg-[#fff] rounded-3xl shadow-md md:w-[45%] mx-3 py-4 mt-10'>
+      <div className='bg-[#fff] rounded-3xl boxShadow md:w-[45%] mx-3 py-4 mt-10'>
         <div className='flex items-center justify-between mb-5 md:px-10 px-5 pt-2'>
           <div>
             <h1 className='text-xl font-semibold text-slate-700'>Inbox</h1>

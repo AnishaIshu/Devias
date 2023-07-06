@@ -5,7 +5,7 @@ import { AiOutlineLink } from 'react-icons/ai';
 const HelpCenter = () => {
   return (
     <>
-        <div className='bg-[#fff] mx-3 mt-10 md:w-[55%] pt-3 rounded-3xl shadow-md'>
+        <div className='bg-[#fff] mx-3 mt-10 md:w-[55%] pt-3 rounded-3xl boxShadow'>
          <div className='flex items-center gap-3 py-3 px-10'>
           <BsInfoCircle className='text-[25px] text-[#6366F1] '/>
           <h1 className='text-[#6366F1] font-medium'>Help center</h1>

@@ -4,7 +4,7 @@ import React from 'react'
 const Subscription = () => {
   return (
     <>
-      <div className='md:w-[60%] h-[100%] mx-3 mt-10 py-10 bg-[#fff] rounded-3xl shadow-md md:px-7 px-4'>
+      <div className='md:w-[60%] h-[100%] mx-3 mt-10 py-10 bg-[#fff] rounded-3xl boxShadow md:px-7 px-4'>
         <div className='flex items-center justify-between '>
          <div>
             <h1 className='text-[18px] font-semibold text-slate-800'>

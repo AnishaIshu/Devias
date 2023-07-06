@@ -51,7 +51,7 @@ const transitionData = [
 
   return (
     <>
-    <div className='md:w-[60%] mx-3 bg-[#fff] mt-8 pt-5 rounded-3xl shadow-md'>
+    <div className='md:w-[60%] mx-3 bg-[#fff] mt-8 pt-5 rounded-3xl boxShadow'>
           <h1 className='text-[18px] font-semibold text-slate-800 pl-8 pt-3'>Latest Transition</h1> 
           <p className='text-[15px] font-medium text-slate-500 pl-8 pb-1'>Based on the selected period</p>  
        <div className='flex items-center gap-6 text-[15px] font-semibold text-slate-600 mt-4 pl-8 mb-3'>

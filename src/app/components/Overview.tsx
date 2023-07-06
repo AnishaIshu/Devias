@@ -7,21 +7,21 @@ const Overview = () => {
   const overviewData = [
     {
       id: 1,
-      img: "/images/overview/overOne.svg",
+      img: "/images/overview/overOne.png",
       h1 : "Done Tasks",
       h2 : "See all tasks",
       h6 : "31"
     },
     {
       id: 2,
-      img: "/images/overview/overTwo.svg",
+      img: "/images/overview/overTwo.png",
       h1 : "Panding Issues",
       h2 : "See all issues",
       h6 : "12"
     },
     {
       id: 3,
-      img: "/images/overview/overThree.svg",
+      img: "/images/overview/overThree.png",
       h1 : "Open Tickets",
       h2 : "See all tickets",
       h6 : "5"
@@ -46,7 +46,7 @@ const Overview = () => {
 
   console.log(Image, "kjdfhjfk")
   return (
-<div key={index} className=" shadow-md bg-white w-full md:w-[32%] pt-8 rounded-xl my-5">
+<div key={index} className="boxShadow bg-white w-full md:w-[32%] pt-8 rounded-xl my-5">
         <div className="flex items-start pl-10 gap-5">
         <Image src={item.img} width={50} height={30} alt="" />
         <div>
