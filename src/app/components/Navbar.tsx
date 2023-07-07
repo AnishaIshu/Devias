@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image";
 import React, { useState } from "react";
+import 'tailwindcss/tailwind.css'
 
 // icon
 import { RiSearchLine } from "react-icons/ri";
@@ -169,7 +170,7 @@ const personContent = [
             />
           </div>
 
-          <div onClick={handleNotification}
+          <div onClick={handleNotification}   
             title='Notification'
             className='relative hover:bg-zinc-100 cursor-pointer w-10 px-[7px] py-[7px] rounded-full'
           >
@@ -210,8 +211,11 @@ const personContent = [
       </div>
 
 
+{/* search */}
 
-{search?   <div className="py-5 shadow-md border-t-zinc-400 rounded-xl px-2 sm:px-5 xl:w-[35%] 2xl:w-[30%] mx-2 absolute top-[30%] sm:left-[20%] md:left-[20%] lg:left-[28%] xl:left-[42%] z-50  bg-white">
+{search?  
+<div className="absolute top-0 left-0 w-screen h-screen flex justify-center items-center searchRepo">
+<div className="py-5 shadow-md border-t-zinc-400 rounded-xl px-2 sm:px-5 xl:w-[35%] 2xl:w-[30%] mx-2 top-[30%] sm:left-[20%] md:left-[20%] lg:left-[28%] xl:left-[42%] z-50  bg-white">
         <div className="flex items-center justify-between mb-10 text-zinc-900">
         <div className="font-semibold text-lg">Search</div>
         <div onClick={() => setSearch(false)} className="text-xl cursor-pointer"><RxCross2 /></div>
@@ -230,9 +234,12 @@ const personContent = [
       <input type="text" className=" focus:outline-none text-base font-semibold text-zinc-700" placeholder="Search..."/>
       </div>
     </div>
-  </div> : ''}
+  </div> 
+</div>
+: ''}
 
-{language? <div className="bg-white shadow-md w-56 rounded-md absolute top-16 right-14 xl:right-60 md:right-56">
+{/* language */}
+{language? <div className="bg-white shadow-md w-56 zoomClass rounded-md absolute top-16 right-14 xl:right-60 md:right-56">
   {languagesContent.map((item, index)=> {
     return(
       <div key={index} className="flex items-center gap-6 px-4 py-2 hover:bg-gray-100 cursor-pointer">
@@ -244,7 +251,8 @@ const personContent = [
 
 </div>:'' }
 
-{notification?<div className="bg-white w-[18rem] sm:w-[23rem] shadow-md rounded-lg absolute right-0 mx-3">
+{/* notification */}
+{notification?<div className="bg-white w-[18rem] zoomClass sm:w-[23rem] shadow-md rounded-lg top-16 absolute right-0 mx-3">
   <div className="flex items-center justify-between py-4 px-4">
     <div className="text-lg font-semibold text-zinc-800">Notifications</div>
     <div className="text-zinc-800 text-2xl"><LuMailOpen /></div>
@@ -276,8 +284,8 @@ const personContent = [
  
 </div>:'' }
 
-
-{contact? <div className="bg-white boxShadow w-[18rem] lg:w-[20rem] py-4 rounded-md  absolute right-5 top-16">
+{/* contact */}
+{contact? <div className="bg-white boxShadow w-[18rem] zoomClass lg:w-[20rem] py-4 rounded-md absolute right-5 top-16">
   <h1 className="font-semibold text-lg pb-6 text-zinc-800 px-5">Contacts</h1>
 
 
@@ -301,7 +309,8 @@ const personContent = [
 
 </div> : ''}
 
-{profile? <div className="bg-white border rounded-md w-[12rem] absolute right-3 top-16">
+{/* profile */}
+{profile? <div className="bg-white border rounded-md w-[12rem] zoomClass absolute right-3 top-16">
   <div className="py-3 px-5">
     <h1 className="font-medium text-lg text-zinc-700">Anika Vissar</h1>
     <h1 className="leading-3 font-medium text-sm text-zinc-500">demo@devias.io</h1>

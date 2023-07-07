@@ -13,7 +13,7 @@ const Update = () => {
         <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.2 }}
             >
       <Image src="/images/update/personStanding.png" className='m-auto' width={200} height={100} alt="" /> 
       </motion.div>
