@@ -198,7 +198,19 @@ const SideBar = () => {
     {
       id: 5,
       img: "/images/sideBar/pages/error.svg",
-      name: "Error"
+      name: "Error",
+      icon: <IoIosArrowForward />,
+      
+      sub: [ {
+        authName:"401"
+      },
+        {
+        authName: "404"
+      },
+        {
+        authName:"500"
+      }
+      ]
     },
   ];
 
@@ -208,25 +220,8 @@ const SideBar = () => {
       img: "/images/sideBar/music/level.svg",
       name: "Level",
       icon: <IoIosArrowForward />,
-      sub: [
-        {
           levelName: "Level 1a",
-          arrow: <IoIosArrowForward />,
-          sub: [
-            {
-              levelTwo: "Level 2a",
-              arrowTwo: <IoIosArrowForward />,
-              sub: ["Level 3a", "Level 3b"],
-            },
-            {
-              levelTwo: "Level 2b",
-            },
-          ],
-        },
-        {
-          levelName: "Level 1b",
-        },
-      ],
+          sub: [ "Level 1a",  "Level 1b"],
     },
     {
       id: 2,
@@ -270,11 +265,11 @@ const SideBar = () => {
 
 
 // pageMap dropdown listdiv
-const [pageDropdown , SetPageDropdown] = useState(false);
-const pageData = () => {
-  SetPageDropdown(!pageDropdown);
-  console.log(pageDropdown);
-}
+// const [pageDropdown , SetPageDropdown] = useState(false);
+// const pageData = () => {
+//   SetPageDropdown(!pageDropdown);
+//   console.log(pageDropdown);
+// }
 
 
   return (
@@ -335,7 +330,7 @@ const pageData = () => {
               return (
                 <div  key={index}>
                   <div
-                    className={`flex pl-3 py-2 hover:bg-[#303848] rounded-md gap-4 cursor-pointer mb-[2px] ${item.bgColor} py-2`}
+                    className={`flex pl-3 py-2 rippleButton hover:bg-[#303848] rounded-md gap-4 cursor-pointer mb-[2px] ${item.bgColor} py-2`}
                   >
                     <div>
                       <Image
@@ -422,7 +417,7 @@ const pageData = () => {
               Please check our docs.
             </h6>
 
-            <div className='flex bg-[#6366F1] items-center cursor-pointer hover:bg-[#494cff] gap-2 mr-3 mt-3 rounded-xl justify-center '>
+            <div className='flex bg-[#6366F1] items-center cursor-pointer rippleButton hover:bg-[#5c5fff] gap-2 mr-3 mt-3 rounded-xl justify-center '>
               <HiOutlineDocument className='text-white text-xl' />
               <h1 className='text-white text-[15px] font-semibold py-[10px]'>
                 Documentation
