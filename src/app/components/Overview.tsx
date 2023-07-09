@@ -37,8 +37,8 @@ const Overview = () => {
         <div className='text-[28px] md:text-[35px] font-[600] Jakarta text-[#181e28]'>
           Overview
         </div>
-        {/* 6366F1 */}
-        <div className='bg-[#6366F1] rippleButton flex items-center gap-1 px-2 py-2 rounded-lg cursor-pointer hover:bg-[#5c5ff4]'>
+
+        <div className='bg-[#6366F1] flex items-center gap-1 px-2 py-2 rounded-lg cursor-pointer hover:bg-[#3b3de2]'>
           <div><AiOutlinePlus className="text-[#ffff]"/></div>
           <div className="system text-white font-bold">New Dashboard</div>
         </div>
@@ -65,7 +65,7 @@ const Overview = () => {
         </div>
         
         <hr />
-        <div className="flex rippleButton items-center justify-between my-3 ml-10 mr-60 px-4 w-40 rounded-lg py-2 hover:bg-zinc-100 cursor-pointer">  
+        <div className="flex items-center py-3 pl-10">
         <h2 className="text-[#111927] text-sm font-semibold">{item.h2}</h2>
         <IoMdArrowForward className="text-[#111927] text-xl"/>
         </div>

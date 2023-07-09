@@ -43,6 +43,9 @@ const Inbox = () => {
         }
     ]
 
+
+
+
   return (
     <>
       <div className='bg-[#fff] rounded-3xl boxShadow md:w-[45%] mx-3 py-4 mt-10'>
@@ -86,7 +89,7 @@ const Inbox = () => {
 })}
 
 <hr />
-<div className="flex items-center gap-2 text-base font-semibold text-slate-600 ml-10 cursor-pointer rippleButton hover:bg-slate-100 rounded-md mt-4 w-40 px-6 py-2">
+<div className="flex items-center gap-2 text-base font-semibold text-slate-600 ml-10 cursor-pointer hover:bg-slate-100 rounded-md mt-4 w-40 px-6 py-2">
 Go to Chat <FiArrowRight />
 </div>
 

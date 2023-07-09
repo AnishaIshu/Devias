@@ -39,6 +39,7 @@ export default function Home() {
                     <Jobs />
                     <HelpCenter />
                 </div>
+      
         </div>
       </div>
     </main>
