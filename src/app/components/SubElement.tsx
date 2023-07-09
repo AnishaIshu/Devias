@@ -37,7 +37,7 @@ const SubElement:any = ({ conceptData }: { conceptData: any }) => {
             <motion.div whileTap={{ scale: 0.97 }}
 onClick={() => setIsOpen(!isOpen)}>
 
-       <motion.div className='flex items-center justify-between py-2 rounded-md hover:bg-[#303848] pr-2 cursor-pointer  my-2'> 
+       <motion.div className='flex items-center justify-between py-2 rounded-md rippleButton hover:bg-[#303848] pr-2 cursor-pointer  my-2'> 
        
           <div className='flex gap-5'>
             <Image
