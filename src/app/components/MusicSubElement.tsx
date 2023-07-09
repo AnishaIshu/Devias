@@ -38,7 +38,7 @@ className="menu">
       <motion.div whileTap={{ scale: 0.97 }}
 onClick={() => setIsOpen(!isOpen)}>
 
- <motion.div className='flex items-center justify-between py-2 rounded-md hover:bg-[#303848] pr-2 cursor-pointer  my-2'> 
+ <motion.div className='flex items-center justify-between py-2 rounded-md rippleButton hover:bg-[#303848] pr-2 cursor-pointer  my-2'> 
  
     <div className='flex gap-5'>
       <Image
@@ -104,8 +104,8 @@ onClick={() => setIsOpen(!isOpen)}>
             return(
                 <div key={index}>
                    {levelDropDown ?    
-                    <motion.li variants={itemVariants} className="flex items-center justify-between px-6 my-1 hover:bg-[#303848] rounded-lg py-1 cursor-pointer">
-                <h1 className="text-[#9ca3af] py-1 pl-8 text-[13px]  font-semibold text-left rounded-md cursor-pointer">{ele.levelName}</h1>
+                    <motion.li variants={itemVariants} className="flex items-center justify-between px-6 my-1 rippleButton hover:bg-[#303848] rounded-lg py-1 cursor-pointer">
+                <h1 className="text-[#9ca3af] py-1 pl-8 text-[13px]  font-semibold text-left rounded-md cursor-pointer">{ele}</h1>
                 <div onClick={handleList} className='text-[#9ca3af]'>
                 </div>
              </motion.li> : ""}
