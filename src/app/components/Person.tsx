@@ -1,8 +1,9 @@
 'use client';
 import Image from 'next/image';
-import React, {useEffect, useState, Fragment} from 'react';
-import { Menu, Transition } from '@headlessui/react';
+import React, { useState } from 'react';
 import 'tailwindcss/tailwind.css';
+import ClickAwayListener from 'react-click-away-listener';
+
 
 export const Person = () => {
   // person
@@ -30,14 +31,18 @@ export const Person = () => {
   };
 
   return (
-    <div>
+    <ClickAwayListener onClickAway={() => {
+      setProfile(false);
+    }}>
+
+      <div>
       <div
         onClick={handleprofile}
         className="border-2 cursor-pointer border-zinc-200 p-[2px] rounded-full"
       >
         <Image
           src="/images/navbar/profile.png"
-          width={30}
+          width={25}
           height={30}
           alt=""
           className="rounded-full"
@@ -46,7 +51,7 @@ export const Person = () => {
 
 
        
-            <div  className={`bg-white shadow-md w-56 rounded-md absolute z-10 top-16 right-5 dropdownDiv ${profile ? "active" : ""}`}>
+            <div  className={`bg-white shadow-md w-56 rounded-md absolute z-10 top-16 xl:right-80 right-10 dropdownDiv ${profile ? "active" : ""}`}>
               <div className="py-3 px-5">
                 <h1 className="font-medium text-lg text-zinc-700">
                   Anika Vissar
@@ -63,7 +68,7 @@ export const Person = () => {
                         key={index}
                         className="py-2 px-2 flex items-center gap-4 cursor-pointer rounded-md my-1 mx-2 hover:bg-zinc-100"
                       >
-                        <Image src={item.img} width={23} height={20} alt="" />
+                        <Image src={item.img} width={25} height={20} alt="" />
                         <h1 className="text-[16px] font-semibold text-zinc-600">
                           {item.title}
                         </h1>
@@ -79,6 +84,7 @@ export const Person = () => {
                 </h1>
               </div>
             </div>
-       </div>
+            </div>
+       </ClickAwayListener>
   );
 };

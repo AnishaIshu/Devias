@@ -43,18 +43,15 @@ onClick={() => setIsOpen(!isOpen)}>
             <Image
               src={conceptData.img}
               className='ml-3'
-              width={21}
-              height={25}
+              width={20}
+              height={22}
               alt=''
             />
-              <h1 className='text-[14px] text-[#9ca3af] font-bold text-left '>
+              <h1 className='text-[13px] text-[#9ca3af] font-bold text-left '>
                 {conceptData.name}
               </h1>
           </div>
-
-
-
-           <motion.button className='text-[#9ca3af]' whileTap={{ scale: 0.97 }}
+           <motion.button className='text-slate-500' whileTap={{ scale: 0.97 }}
         onClick={() => setIsOpen(!isOpen)}
         >
            <motion.div
@@ -65,33 +62,15 @@ onClick={() => setIsOpen(!isOpen)}>
           transition={{ duration: 0.2 }}
           style={{ originY: 0.55 }}
         >
-           {/* {dropdownIcon ?  <IoIosArrowDown /> : <div>{conceptData.icon}
-            //  {conceptData? <div>{conceptData.icon}</div> : ''}
-           </div>} */}
-
-
-
-
            {conceptData.sub ? <div>{dropdownIcon ? <IoIosArrowDown/> : <div>{conceptData.icon}</div>}</div> : ''}
-
-
 
         </motion.div>
            </motion.button>
 
-
-
-
            </motion.div>
 
+
         </motion.div>
-
-
-
-
-
-
-
 
          <motion.ul variants={{
               open: {
@@ -99,7 +78,7 @@ onClick={() => setIsOpen(!isOpen)}>
                 transition: {
                   type: "spring",
                   bounce: 0,
-                  duration: 0.7,
+                  duration: 0.9,
                   delayChildren: 0.3,
                   staggerChildren: 0.05
                 }
@@ -109,7 +88,7 @@ onClick={() => setIsOpen(!isOpen)}>
                 transition: {
                   type: "spring",
                   bounce: 0,
-                  duration: 0.3
+                  duration: 0.9
                 }
               }
             }}
@@ -119,7 +98,7 @@ onClick={() => setIsOpen(!isOpen)}>
           return (
             <div key={index}>
        {dropDown?     
-       <motion.li variants={itemVariants} className='text-[13px] text-[#9ca3af] font-semibold text-left pl-16 py-2 rounded-md cursor-pointer hover:bg-[#303848]'>
+       <motion.li variants={itemVariants} className='text-[12px] text-[#9ca3af] font-semibold text-left pl-16 py-2 rounded-md cursor-pointer hover:bg-[#303848]'>
          {ele}
        </motion.li>
       : ""}     

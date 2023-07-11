@@ -5,16 +5,16 @@ import { AiOutlineLink } from 'react-icons/ai';
 const HelpCenter = () => {
   return (
     <>
-        <div className='bg-[#fff] mx-3 mt-10 md:w-[55%] pt-3 rounded-3xl boxShadow'>
-         <div className='flex items-center gap-3 py-3 px-10'>
-          <BsInfoCircle className='text-[25px] text-[#6366F1] '/>
-          <h1 className='text-[#6366F1] font-medium'>Help center</h1>
+        <div className='bg-[#fff] mx-2 mt-10 md:w-[55%] pt-3 rounded-3xl boxShadow'>
+         <div className='flex items-center gap-3 py-3 px-6'>
+          <BsInfoCircle className='text-[20px] text-[#6366F1] '/>
+          <h1 className='text-[#6366F1] text-[14px] font-semibold'>Help center</h1>
          </div>
-          <h1 className='font-semibold text-lg py-1 md:px-10 px-5'>Need help figuring things out?</h1>
-          <p className='text-sm pb-7 text-slate-500 md:pl-10 px-5 pr-8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h1 className='font-bold text-[16px] py-1 px-7'>Need help figuring things out?</h1>
+          <p className='text-[13px] pb-7 text-slate-500 px-7 pr-8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <hr />
-          <div className='px-10 py-3 text-sm font-semibold'>
-            <div className='flex items-center gap-3 rippleButtonDashboard hover:bg-zinc-100 py-2 w-36 px-3 rounded-lg cursor-pointer'>
+          <div className='px-5 py-2 text-[13px] font-semibold'>
+            <div className='flex items-center justify-between rippleButtonDashboard hover:bg-zinc-100 py-2 w-32 px-3 rounded-lg cursor-pointer'>
              Help Center
           <AiOutlineLink className='text-xl'/>
             </div>

@@ -48,14 +48,14 @@ onClick={() => setIsOpen(!isOpen)}>
         height={25}
         alt=''
       />
-        <h1 className='text-[14px] text-[#9ca3af] font-bold text-left '>
+        <h1 className='text-[13px] text-[#9ca3af] font-bold text-left '>
           {musicData.name}
         </h1>
     </div>
 
 
 
-     <motion.button className='text-[#9ca3af]' whileTap={{ scale: 0.97 }}
+     <motion.button className='text-slate-500' whileTap={{ scale: 0.97 }}
   onClick={() => setIsOpen(!isOpen)}
   >
      <motion.div
@@ -105,7 +105,7 @@ onClick={() => setIsOpen(!isOpen)}>
                 <div key={index}>
                    {levelDropDown ?    
                     <motion.li variants={itemVariants} className="flex items-center justify-between px-6 my-1 rippleButton hover:bg-[#303848] rounded-lg py-1 cursor-pointer">
-                <h1 className="text-[#9ca3af] py-1 pl-8 text-[13px]  font-semibold text-left rounded-md cursor-pointer">{ele}</h1>
+                <h1 className="text-[#9ca3af] py-1 pl-8 text-[12px]  font-semibold text-left rounded-md cursor-pointer">{ele}</h1>
                 <div onClick={handleList} className='text-[#9ca3af]'>
                 </div>
              </motion.li> : ""}

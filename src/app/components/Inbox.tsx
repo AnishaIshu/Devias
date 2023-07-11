@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import { MdReplay } from "react-icons/md";
-import { FiArrowRight } from "react-icons/fi";
+import { VscArrowRight } from "react-icons/vsc";
 
-const Inbox = () => {
+const Inbox = () => { 
+  
 
     const profile = [
         {
@@ -43,12 +44,12 @@ const Inbox = () => {
         }
     ]
 
-  return (
+  return ( 
     <>
-      <div className='bg-[#fff] rounded-3xl boxShadow md:w-[45%] mx-3 py-4 mt-10'>
-        <div className='flex items-center justify-between mb-5 md:px-10 px-5 pt-2'>
+      <div className='bg-[#fff] rounded-3xl boxShadow md:w-[45%] mx-3 mt-10'>
+        <div className='flex items-center justify-between mb-5 md:px-10 px-5 pt-8'>
           <div>
-            <h1 className='text-xl font-semibold text-slate-700'>Inbox</h1>
+            <h1 className='text-[17px] font-bold text-slate-700'>Inbox</h1>
           </div>
           <div>
             <MdReplay className='text-slate-600 text-2xl' />
@@ -58,38 +59,42 @@ const Inbox = () => {
 
 {profile.map((profileData, index) => {
     return(
-        <div key={index} className="flex items-center justify-between md:px-5 px-3 py-2 my-1 hover:bg-slate-100 cursor-pointer">
+        <div key={index} className="flex items-center justify-between md:px-5 px-3 py-3 hover:bg-slate-100 cursor-pointer">
         <div className='flex gap-4 items-center'>
           <Image
             src={profileData.img}
-            width={50}
+            width={40}
             height={100}
             className='rounded-full'
             alt=''
           />
 
           <div>
-            <h1 className='md:text-[15px] text-[14px] text-slate-700 font-semibold'>
+            <h1 className='md:text-[14px] text-[14px] text-slate-700 font-semibold'>
               {profileData.name}
             </h1>
-            <p className='md:text-[14px] text-[12px] leading-3 text-slate-500 font-medium'>
+            <p className='md:text-[13px] text-[12px] leading-3 text-slate-500 font-medium'>
              {profileData.p}
             </p>
           </div>
         </div>
 
         <div>
-          <p className="md:text-[14px] text-[11px] font-semibold text-slate-500">{profileData.time}</p>
+          <p className="md:text-[12px] text-[11px] font-semibold text-slate-500">{profileData.time}</p>
         </div>
       </div>
     )
 })}
 
 <hr />
-<div className="flex items-center gap-2 text-base font-semibold text-slate-600 ml-10 cursor-pointer rippleButtonDashboard hover:bg-slate-100 rounded-md mt-4 w-40 px-6 py-2">
-Go to Chat <FiArrowRight />
-</div>
 
+
+<div className='px-5 py-2 text-[13px] font-semibold'>
+            <div className='flex items-center justify-between rippleButtonDashboard hover:bg-zinc-100 py-2 w-32 px-3 rounded-lg cursor-pointer'>
+            Go to Chat 
+          <VscArrowRight />
+            </div>
+          </div>
       
       </div>
     </>

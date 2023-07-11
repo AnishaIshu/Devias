@@ -1,8 +1,7 @@
 'use client';
-import React, {useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { Menu, Transition } from '@headlessui/react';
-import { Fragment } from 'react';
+import ClickAwayListener from 'react-click-away-listener';
 
 export const Contacts = () => {
   // contacts
@@ -45,7 +44,12 @@ export const Contacts = () => {
   };
 
   return (
-    <div>
+
+<ClickAwayListener onClickAway={() => {
+      setContact(false);
+    }}>
+
+<div>
       <div
         onClick={handleContact}
         title="Contacts"
@@ -53,14 +57,14 @@ export const Contacts = () => {
       >
         <Image
           src="/images/navbar/contacts.svg"
-          width={30}
+          width={25}
           height={30}
           alt=""
         />
       </div>
 
    
-            <div className={`bg-white shadow-md w-72 rounded-md absolute z-10 top-16 lg:right-10 right-3 dropdownDiv ${contact ? "active" : ""}`}>
+            <div className={`bg-white shadow-md w-72 rounded-md absolute z-10 top-16 lg:right-10 right-3 xl:right-[24rem] dropdownDiv ${contact ? "active" : ""}`}>
               <h1 className="font-semibold text-lg pb-6 text-zinc-800 px-5">
                 Contacts
               </h1>
@@ -103,7 +107,8 @@ export const Contacts = () => {
               </div>
             </div>
    
-    
-    </div>
+            </div>
+            </ClickAwayListener>
+
   );
 };

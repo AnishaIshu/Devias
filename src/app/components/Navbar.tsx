@@ -1,6 +1,8 @@
 'use client';
 import Image from 'next/image';
 import React, { useState } from 'react';
+import ClickAwayListener from 'react-click-away-listener';
+
 
 
 // icon
@@ -8,8 +10,6 @@ import { RiSearchLine } from 'react-icons/ri';
 import { FiSearch } from 'react-icons/fi';
 import { RxCross2 } from 'react-icons/rx';
 import { PiLightbulbFilamentBold } from 'react-icons/pi';
-import { LuMailOpen } from 'react-icons/lu';
-import { GoPerson } from 'react-icons/go';
 import { Notification } from './Notification';
 import { Languages } from './Languages';
 import { Contacts } from './Contacts';
@@ -23,7 +23,8 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="flex justify-between w-[100%] px-7 mt-5">
+      <div className=" w-[100%] px-7 pt-5 pb-5 bg-neutral-100 lg:bg-neutral-50 z-20 fixed lg:flex lg:justify-between">
+<div className=' flex justify-between w-[100%] xl:mr-72 mr-5'>
         <div
           onClick={handleSearch}
           title="Search"
@@ -32,7 +33,7 @@ const Navbar = () => {
           <RiSearchLine className="text-2xl text-zinc-500 cursor-pointer ml-14 xl:ml-0" />
         </div>
 
-        <div className="flex items-center md:gap-7 gap-1">
+        <div className="flex items-center md:gap-3 gap-1">
           <Languages/>
 
           <Notification/>
@@ -41,16 +42,23 @@ const Navbar = () => {
 
           <Person/>
         </div>
+        </div>
       </div>
 
       {/* search */}
 
+
       {search ? (
-        <div
-          onClick={() => setSearch(false)}
-          className="absolute top-0 left-0 w-screen h-screen flex justify-center items-center searchRepo"
+        
+
+        <div className="absolute top-0 left-0 w-screen h-screen flex justify-center items-center searchRepo"
         >
-          <div className="py-5 shadow-md border-t-zinc-400 rounded-xl px-2 sm:px-5 xl:w-[35%] 2xl:w-[30%] mx-2 top-[30%] sm:left-[20%] md:left-[20%] lg:left-[28%] xl:left-[42%] z-50  bg-white">
+
+<ClickAwayListener onClickAway={() => {
+        setSearch(false);
+      }}>
+
+              <div className="py-5 shadow-md border-t-zinc-400 rounded-xl px-2 sm:px-5 xl:w-[35%] 2xl:w-[30%] mx-2 top-[30%] sm:left-[20%] md:left-[20%] lg:left-[28%] xl:left-[42%] z-50  bg-white">
             <div className="flex items-center justify-between mb-10 text-zinc-900">
               <div className="font-semibold text-lg">Search</div>
               <div
@@ -85,10 +93,19 @@ const Navbar = () => {
               </div>
             </div>
           </div>
+
+
+
+</ClickAwayListener>
         </div>
-      ) : (
+
+      ) 
+      
+      : (
         ''
       )}
+
+
     </>
   );
 };

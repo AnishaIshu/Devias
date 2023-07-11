@@ -39,7 +39,7 @@ onClick={() => setIsOpen(!isOpen)}>
 
       <motion.div
         onClick={dataList}
-        className='flex items-center justify-between py-2 rounded-md rippleButton hover:bg-[#303848] pr-2 cursor-pointer my-2'
+        className='flex items-center justify-between py-2 rounded-md rippleButton hover:bg-[#303848] cursor-pointer my-2'
       >
 
 
@@ -52,7 +52,7 @@ onClick={() => setIsOpen(!isOpen)}>
             alt=''
           />
           <div>
-            <h1 className='text-[14px] text-[#9ca3af] font-semibold text-left'>
+            <h1 className='text-[13px] text-[#9ca3af] font-semibold text-left'>
               {pagesData.name}
             </h1>
           </div>
@@ -60,7 +60,7 @@ onClick={() => setIsOpen(!isOpen)}>
 
 
 
-        <motion.button className=' text-[#9ca3af] mr-4' whileTap={{ scale: 0.97 }}
+        <motion.button className=' text-slate-500 mr-4' whileTap={{ scale: 0.97 }}
         onClick={() => setIsOpen(!isOpen)}>
               <motion.div
           variants={{
@@ -105,8 +105,8 @@ onClick={() => setIsOpen(!isOpen)}>
 <div key={index}>
 {dropDown &&
 <motion.li variants={itemVariants} onClick={nestedData} className="flex items-center justify-between my-1 px-3 rippleButton hover:bg-[#303848] rounded-lg py-1  cursor-pointer">
-    <h1 className="text-[#9ca3af] pl-8 py-2 text-[13px]  font-semibold text-left rounded-md ">{ele.authName}</h1>
-     <div className="text-[#9ca3af] ">
+    <h1 className="text-[#9ca3af] pl-8 py-2 text-[12px]  font-semibold text-left rounded-md ">{ele.authName}</h1>
+     <div className="text-slate-600 ">
      {dropDownIcon ? <div>{ele.arrow}</div> : <IoIosArrowDown /> }   
      </div>
 </motion.li>
@@ -134,7 +134,7 @@ export  function NestedPageEle({pagesData}:any) {
         return(
           <div key={index} >
           <div className="flex items-center pl-10 justify-between my-1 rippleButton hover:bg-[#303848] rounded-lg py-1">
-          <h1 className="text-[#9ca3af] pl-8 py-1 text-[13px]  font-semibold text-left rounded-md cursor-pointer">{elem}</h1>
+          <h1 className="text-[#9ca3af] pl-8 py-1 text-[12px]  font-semibold text-left rounded-md cursor-pointer">{elem}</h1>
         </div> 
          </div> 
         )

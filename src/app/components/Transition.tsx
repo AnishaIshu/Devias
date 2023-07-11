@@ -4,7 +4,7 @@ const Transition = () => {
   const transitionData = [
     {
       id: 1,
-      date: '4',
+      date: '11',
       name: 'Devias',
       p: 'Payment received',
       hold: 'ON_HOLD',
@@ -15,7 +15,7 @@ const Transition = () => {
     },
     {
       id: 2,
-      date: '3',
+      date: '10',
       name: 'Zimbru',
       p: 'Payment sent',
       hold: 'CONFIRMED',
@@ -26,7 +26,7 @@ const Transition = () => {
     },
     {
       id: 3,
-      date: '3',
+      date: '10',
       name: 'Vertical Jelly',
       p: 'Payment sent',
       hold: 'FAILED',
@@ -37,7 +37,7 @@ const Transition = () => {
     },
     {
       id: 4,
-      date: '1',
+      date: '8',
       name: 'Devias',
       p: 'Payment received',
       hold: 'CONFIRMED',
@@ -50,14 +50,14 @@ const Transition = () => {
 
   return (
     <>
-      <div className="md:w-[60%] mx-3 bg-[#fff] mt-8 pt-5 rounded-3xl boxShadow">
-        <h1 className="text-[18px] font-semibold text-slate-800 pl-8 pt-3">
+      <div className="md:w-[60%] h-[100%] mx-3 bg-[#fff] mt-8 pt-5 rounded-3xl boxShadow">
+        <h1 className="text-[17px] font-bold text-slate-800 pl-8 pt-4">
           Latest Transition
         </h1>
-        <p className="text-[15px] font-medium text-slate-500 pl-8 pb-1">
+        <p className="text-[15px] font-medium text-slate-500 pl-8 pb-3">
           Based on the selected period
         </p>
-        <div className="flex items-center gap-6 text-[15px] font-semibold text-slate-600 mt-4 pl-8 mb-3">
+        <div className="flex items-center gap-6 text-[14px] font-semibold text-slate-600 mt-4 pl-8 mb-3">
           <h2 className="text-[#7375f3] border-b border-b-[#888afd] cursor-pointer">
             All
           </h2>
@@ -70,31 +70,31 @@ const Transition = () => {
             return (
               <div
                 key={index}
-                className="flex items-center justify-between w-[100%] border-t py-5  px-3 md:px-10  cursor-pointer hover:bg-zinc-100"
+                className="flex items-center justify-between w-[100%] border-t py-3  px-3 md:px-10  cursor-pointer hover:bg-zinc-100"
               >
                 <div className="flex items-center gap-4 md:gap-10">
                   <div className="bg-zinc-100 w-10 text-center rounded-2xl px-2 py-2">
-                    <h1 className="text-sm">JUL</h1>
-                    <h1 className="font-semibold text-xl">{data.date}</h1>
+                    <h1 className="text-[13px]">JUL</h1>
+                    <h1 className="font-bold text-[16px]">{data.date}</h1>
                   </div>
                   <div>
-                    <h1 className="text-[14px] sm:text-[17px] font-semibold text-slate-600">
+                    <h1 className="text-[12px] sm:text-[15px] font-semibold text-slate-700">
                       {data.name}
                     </h1>
-                    <p className="text-[12px] sm:text-[15px] font-medium text-slate-500">
+                    <p className="text-[12px] sm:text-[14px] font-medium text-slate-500">
                       {data.p}
                     </p>
                   </div>
                 </div>
 
                 <div
-                  className={`${data.bgColor} ${data.text} px-2 py-1 text-center text-[10px] sm:text-[14px] rounded-full font-semibold`}
+                  className={`${data.bgColor} ${data.text} px-2 py-1 text-center text-[10px] sm:text-[12px] rounded-full font-bold`}
                 >
                   {data.hold}
                 </div>
 
                 <div
-                  className={`${data.priceColor} w-24 text-center text-[10px] sm:text-[14px] rounded-full font-semibold`}
+                  className={`${data.priceColor} w-28 text-center text-[10px] sm:text-[14px] rounded-full font-semibold`}
                 >
                   {data.price}
                 </div>

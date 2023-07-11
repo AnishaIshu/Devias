@@ -270,7 +270,7 @@ const SideBar = () => {
       ) : (
         <div
           onClick={hundelClick}
-          className=' hover:bg-gray-300 absolute top-0 left-0  cursor-pointer w-10 rounded-full px-4 py-2 m-5 xl:hidden block'
+          className=' hover:bg-gray-300 top-0 absolute left-0 cursor-pointer w-10 rounded-full px-4 py-2 m-5 z-40  xl:hidden block'
         >
           <AiOutlineMenu className='text-2xl text-zinc-600' />
         </div>
@@ -279,7 +279,7 @@ const SideBar = () => {
       {show ? (
         ""
       ) : (
-        <div className='sideBarColor  w-72 pt-6 pl-5 pr-6 pb-5 absolute z-10 top-0 left-0 h-screen overflow-y-auto scrollBarDesign'>
+        <div className='sideBarColor select-none w-72 pt-6 pl-5 pr-6 pb-5 absolute z-[50] top-0 left-0 h-screen overflow-y-auto scrollBarDesign'>
 
           {/* CLOSE ICON */}
           <div>
@@ -302,8 +302,8 @@ const SideBar = () => {
               />
             </div>
             <div className='pr-16'>
-              <h1 className='text-white text-lg font-bold'>Devias</h1>
-              <h6 className='text-zinc-400 text-sm leading-3'>Production</h6>
+              <h1 className='text-white text-[16px] font-semibold'>Devias</h1>
+              <h6 className='text-zinc-400 text-sm font-medium leading-3'>Production</h6>
             </div>
             <IoIosArrowDown className='text-zinc-500 mr-5 text-sm cursor-pointer' />
           </div>
@@ -329,7 +329,7 @@ const SideBar = () => {
                     </div>
                     <div>
                       <h1
-                        className={`${item.txtColor} text-[14px] font-semibold `}
+                        className={`${item.txtColor} text-[13px] font-semibold `}
                       >
                         {item.name}
                       </h1>

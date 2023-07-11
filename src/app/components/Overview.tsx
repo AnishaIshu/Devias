@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { AiOutlinePlus } from 'react-icons/ai';
-import { IoMdArrowForward } from 'react-icons/io';
+import { VscArrowRight } from 'react-icons/vsc';
 
 
 
@@ -33,14 +33,14 @@ const Overview = () => {
 
   return (
     <>
-      <div className="flex justify-between items-center mx-3 mt-16">
-        <div className='text-[28px] md:text-[35px] font-[600] Jakarta text-[#181e28]'>
+      <div className="flex justify-between items-center mx-3 mt-28 ">
+        <div className='text-[25px] md:text-[33px] font-bold text-[#292c33]'>
           Overview
         </div>
         {/* 6366F1 */}
-        <div className='bg-[#6366F1] rippleButtonBlueBtn flex items-center gap-1 px-2 py-2 rounded-lg cursor-pointer hover:bg-[#5c5ff4]'>
+        <div className='bg-[#5d5fe7]  rippleButtonBlueBtn flex items-center gap-1 px-4 py-2 rounded-lg cursor-pointer hover:bg-[#4e51f6]'>
           <div><AiOutlinePlus className="text-[#ffff]"/></div>
-          <div className="system text-white font-bold">New Dashboard</div>
+          <div className="system text-white text-[14px] font-semibold">New Dashboard</div>
         </div>
       </div>
 
@@ -55,16 +55,21 @@ const Overview = () => {
         <Image src={item.img} width={50} height={30} alt="" />
        
         <div>
-          <h6 className="text-[14px] text-[#6C737F] font-medium">{item.h1}</h6>
-          <h1 className="text-4xl Jakarta font-bold pb-7">{item.h6}</h1>
+          <h6 className="text-[13.5px] text-[#8e95a0] font-medium">{item.h1}</h6>
+          <h1 className="text-4xl font-bold pb-7">{item.h6}</h1>
         </div>
         </div>
         
         <hr />
-        <div className="flex rippleButtonDashboard items-center justify-between my-3 ml-10 mr-60 px-4 w-40 rounded-lg py-2 hover:bg-zinc-100 cursor-pointer">  
-        <h2 className="text-[#111927] text-sm font-semibold">{item.h2}</h2>
-        <IoMdArrowForward className="text-[#111927] text-xl"/>
-        </div>
+        <div className='px-5 py-2 text-[13px] font-semibold'>
+            <div className='flex items-center justify-between rippleButtonDashboard hover:bg-zinc-100 py-2 w-32 px-3 rounded-lg cursor-pointer'>
+          {item.h2}
+          <VscArrowRight />
+            </div>
+          </div>
+
+
+
       </div>
   )
 })}

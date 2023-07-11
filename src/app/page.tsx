@@ -19,23 +19,23 @@ export default function Home() {
       </div>
 
       
-      <div className='w-full xl:pl-72 h-screen overflow-y-auto pb-16'>
+      <div className='w-full xl:pl-72 h-screen overflow-y-auto pb-16 select-none'>
         <Navbar />
         <div className='lg:mx-10 xl:mx-28'>
           <Overview />
-               <div className='md:flex w-full md:flex-row flex-col'>
+               <div className='md:flex w-full md:flex-row flex-col gap-5'>
                   <Update />
                   <FreshDesign />
                 </div>
-                <div className="md:flex w-full md:flex-row flex-col">
+                <div className="md:flex w-full md:flex-row flex-col gap-5">
                   <Subscription />
                   <Inbox />
                 </div>
-                <div className="md:flex w-full md:flex-row flex-col">
+                <div className="md:flex w-full md:flex-row flex-col gap-5">
                    <Transition />
                    <UpcommingEvent />
                 </div>
-                <div className="md:flex w-full md:flex-row flex-col">
+                <div className="md:flex w-full md:flex-row flex-col gap-5">
                     <Jobs />
                     <HelpCenter />
                 </div>

@@ -6,6 +6,7 @@ import 'tailwindcss/tailwind.css';
 import Image from 'next/image';
 import { RxCross2 } from 'react-icons/rx';
 import { LuMailOpen } from 'react-icons/lu';
+import ClickAwayListener from 'react-click-away-listener';
 
 export const Notification = () => {
   // notication
@@ -50,9 +51,12 @@ export const Notification = () => {
   };
 
   return (
-    <div>
 
+<ClickAwayListener onClickAway={() => {
+      setNotification(false);
+    }}>
 
+<div>
       <div
         onClick={handleNotification}
         title="Notification"
@@ -63,7 +67,7 @@ export const Notification = () => {
         </span>
         <Image
           src="/images/navbar/notification.svg"
-          width={30}
+          width={25}
           height={30}
           alt=""
         />
@@ -71,7 +75,7 @@ export const Notification = () => {
 
 
           
-            <div className={`bg-white shadow-md rounded-md absolute mx-3 z-10 top-16 lg:right-10 right-0 dropdownDiv ${notification ? "active" : ""}`}>
+            <div className={`bg-white shadow-md rounded-md absolute select-none   mx-3 z-10 top-16 lg:right-10 right-0 xl:right-[26rem] dropdownDiv ${notification ? "active" : ""}`}>
 
 
               <div className="flex items-center justify-between py-4 px-4">
@@ -132,7 +136,9 @@ export const Notification = () => {
 
 
             </div>
-   
-    </div>
+            </div>
+
+            </ClickAwayListener>
+
   );
 };

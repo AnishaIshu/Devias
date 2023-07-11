@@ -1,10 +1,10 @@
 'use client';
 
 import Image from 'next/image';
-import { useState, Fragment, useEffect } from 'react';
+import { useState } from 'react';
 import React from 'react';
-import { Menu, Transition } from '@headlessui/react';
 import 'tailwindcss/tailwind.css';
+import ClickAwayListener from 'react-click-away-listener';
 
 
 
@@ -34,7 +34,10 @@ export const Languages = () => {
   };
 
   return (
-    <div>
+    <ClickAwayListener onClickAway={() => {
+      setLanguage(false);
+    }}>
+      <div>
       <div
         onClick={handleLanguage}
         title="Language"
@@ -43,7 +46,7 @@ export const Languages = () => {
         <Image
           src="/images/navbar/flag/flagUk.svg"
           title="Language"
-          width={50}
+          width={35}
           height={50}
           alt=""
         />
@@ -51,7 +54,7 @@ export const Languages = () => {
 
    
       {/* language */}
-          <div className={`bg-white shadow-md w-56 rounded-md absolute z-10 top-16 right-14 xl:right-60 md:right-56 dropdownDiv ${language ? "active" : ""}`}>
+          <div className={`bg-white shadow-md w-56 rounded-md absolute z-10 top-16 right-14 xl:right-[30rem] md:right-56 dropdownDiv ${language ? "active" : ""}`}>
             {languagesContent.map((item, index) => {
               return (
                 <div key={index}>
@@ -67,8 +70,8 @@ export const Languages = () => {
               );
             })}
           </div>
-   
-    </div>
+          </div>
+    </ClickAwayListener>
   );
 };
 
