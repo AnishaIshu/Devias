@@ -34,8 +34,8 @@ export const Languages = () => {
   };
 
   return (
-    <Menu>
-      <Menu.Button
+    <div>
+      <div
         onClick={handleLanguage}
         title="Language"
         className="hover:bg-zinc-100 cursor-pointer w-10 px-[7px] py-[7px] rounded-full"
@@ -47,22 +47,14 @@ export const Languages = () => {
           height={50}
           alt=""
         />
-      </Menu.Button>
+      </div>
 
-      {language ? (
-        <Transition
-          as={Fragment}
-          enter="transition ease-out duration-500"
-          enterFrom="transform opacity-0 scale-95"
-          enterTo="transform opacity-100 scale-100"
-          leave="transition ease-in duration-75"
-          leaveFrom="transform opacity-100 scale-100"
-          leaveTo="transform opacity-0 scale-95"
-        >
-          <Menu.Items className="bg-white shadow-md w-56 rounded-md absolute z-10 top-16 right-14 xl:right-60 md:right-56">
+   
+      {/* language */}
+          <div className={`bg-white shadow-md w-56 rounded-md absolute z-10 top-16 right-14 xl:right-60 md:right-56 dropdownDiv ${language ? "active" : ""}`}>
             {languagesContent.map((item, index) => {
               return (
-                <Menu.Item key={index}>
+                <div key={index}>
                   <div className="flex items-center gap-6 px-4 py-2 hover:bg-gray-100 cursor-pointer">
                     <div>
                       <Image src={item.img} width={30} height={35} alt="" />
@@ -71,14 +63,13 @@ export const Languages = () => {
                       {item.langName}
                     </div>
                   </div>
-                </Menu.Item>
+                </div>
               );
             })}
-          </Menu.Items>
-        </Transition>
-      ) : (
-        ''
-      )}
-    </Menu>
+          </div>
+   
+    </div>
   );
 };
+
+

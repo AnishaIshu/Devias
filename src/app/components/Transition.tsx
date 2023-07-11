@@ -70,7 +70,7 @@ const Transition = () => {
             return (
               <div
                 key={index}
-                className="flex items-center justify-between w-[100%] border-t py-5 px-3 md:px-10  cursor-pointer hover:bg-zinc-100"
+                className="flex items-center justify-between w-[100%] border-t py-5  px-3 md:px-10  cursor-pointer hover:bg-zinc-100"
               >
                 <div className="flex items-center gap-4 md:gap-10">
                   <div className="bg-zinc-100 w-10 text-center rounded-2xl px-2 py-2">

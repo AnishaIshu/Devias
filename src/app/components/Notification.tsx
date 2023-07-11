@@ -50,8 +50,10 @@ export const Notification = () => {
   };
 
   return (
-    <Menu as="div" className="relative inline-block text-left">
-      <Menu.Button
+    <div>
+
+
+      <div
         onClick={handleNotification}
         title="Notification"
         className="relative hover:bg-zinc-100 cursor-pointer w-10 px-[7px] py-[7px] rounded-full"
@@ -65,20 +67,13 @@ export const Notification = () => {
           height={30}
           alt=""
         />
-      </Menu.Button>
+      </div>
 
-      {notification ? (
-        <Transition
-          as={Fragment}
-          enter="transition ease-out duration-100"
-          enterFrom="transform opacity-0 scale-95"
-          enterTo="transform opacity-100 scale-100"
-          leave="transition ease-in duration-75"
-          leaveFrom="transform opacity-100 scale-100"
-          leaveTo="transform opacity-0 scale-95"
-        >
-          <Menu.Items>
-            <div className="bg-white w-[18rem] sm:w-[23rem] shadow-md rounded-lg top-14 z-10 absolute right-0 mx-3">
+
+          
+            <div className={`bg-white shadow-md rounded-md absolute mx-3 z-10 top-16 lg:right-10 right-0 dropdownDiv ${notification ? "active" : ""}`}>
+
+
               <div className="flex items-center justify-between py-4 px-4">
                 <div className="text-lg font-semibold text-zinc-800">
                   Notifications
@@ -87,7 +82,9 @@ export const Notification = () => {
                   <LuMailOpen />
                 </div>
               </div>
-              <Menu.Item>
+
+
+              <div>
                 <>
                   {notifyContent.map((item, index) => {
                     return (
@@ -131,13 +128,11 @@ export const Notification = () => {
                     );
                   })}
                 </>
-              </Menu.Item>
+              </div>
+
+
             </div>
-          </Menu.Items>
-        </Transition>
-      ) : (
-        ''
-      )}
-    </Menu>
+   
+    </div>
   );
 };

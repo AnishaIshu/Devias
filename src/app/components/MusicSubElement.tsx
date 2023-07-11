@@ -66,7 +66,7 @@ onClick={() => setIsOpen(!isOpen)}>
     transition={{ duration: 0.2 }}
     style={{ originY: 0.55 }}
   >
-     {dropDownIcon ?  <IoIosArrowDown /> : <div>{musicData.icon}</div>}
+     {musicData.sub ? <div>{dropDownIcon ? <IoIosArrowDown/> : <div>{musicData.icon}</div>}</div> : ''}
   </motion.div>
      </motion.button>
 

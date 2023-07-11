@@ -3,7 +3,7 @@ import Image from "next/image";
 import React from "react";
 import { AiOutlinePlus } from 'react-icons/ai';
 import { IoMdArrowForward } from 'react-icons/io';
-import { motion } from 'framer-motion';
+
 
 
 const Overview = () => {
@@ -38,7 +38,7 @@ const Overview = () => {
           Overview
         </div>
         {/* 6366F1 */}
-        <div className='bg-[#6366F1] rippleButton flex items-center gap-1 px-2 py-2 rounded-lg cursor-pointer hover:bg-[#5c5ff4]'>
+        <div className='bg-[#6366F1] rippleButtonBlueBtn flex items-center gap-1 px-2 py-2 rounded-lg cursor-pointer hover:bg-[#5c5ff4]'>
           <div><AiOutlinePlus className="text-[#ffff]"/></div>
           <div className="system text-white font-bold">New Dashboard</div>
         </div>
@@ -51,13 +51,9 @@ const Overview = () => {
   return (
 <div key={index} className="boxShadow bg-white w-full md:w-[32%] pt-8 rounded-xl my-5">
         <div className="flex items-start pl-10 gap-5">
-        <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.2 }}
-            >
+      
         <Image src={item.img} width={50} height={30} alt="" />
-        </motion.div>
+       
         <div>
           <h6 className="text-[14px] text-[#6C737F] font-medium">{item.h1}</h6>
           <h1 className="text-4xl Jakarta font-bold pb-7">{item.h6}</h1>
@@ -65,7 +61,7 @@ const Overview = () => {
         </div>
         
         <hr />
-        <div className="flex rippleButton items-center justify-between my-3 ml-10 mr-60 px-4 w-40 rounded-lg py-2 hover:bg-zinc-100 cursor-pointer">  
+        <div className="flex rippleButtonDashboard items-center justify-between my-3 ml-10 mr-60 px-4 w-40 rounded-lg py-2 hover:bg-zinc-100 cursor-pointer">  
         <h2 className="text-[#111927] text-sm font-semibold">{item.h2}</h2>
         <IoMdArrowForward className="text-[#111927] text-xl"/>
         </div>

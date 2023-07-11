@@ -45,8 +45,8 @@ export const Contacts = () => {
   };
 
   return (
-    <Menu as="div" className="relative inline-block text-left">
-      <Menu.Button
+    <div>
+      <div
         onClick={handleContact}
         title="Contacts"
         className="hover:bg-zinc-100 cursor-pointer w-10 px-[7px] py-[7px] rounded-full"
@@ -57,25 +57,15 @@ export const Contacts = () => {
           height={30}
           alt=""
         />
-      </Menu.Button>
+      </div>
 
-      {contact ? (
-        <Transition
-          as={Fragment}
-          enter="transition ease-out duration-100"
-          enterFrom="transform opacity-0 scale-95"
-          enterTo="transform opacity-100 scale-100"
-          leave="transition ease-in duration-75"
-          leaveFrom="transform opacity-100 scale-100"
-          leaveTo="transform opacity-0 scale-95"
-        >
-          <Menu.Items>
-            <div className="bg-white boxShadow w-[18rem] lg:w-[20rem] py-4 rounded-md absolute right-0 top-14 z-10">
+   
+            <div className={`bg-white shadow-md w-72 rounded-md absolute z-10 top-16 lg:right-10 right-3 dropdownDiv ${contact ? "active" : ""}`}>
               <h1 className="font-semibold text-lg pb-6 text-zinc-800 px-5">
                 Contacts
               </h1>
 
-              <Menu.Item>
+              <div>
                 <>
                   {contactContent.map((item, index) => {
                     return (
@@ -110,13 +100,10 @@ export const Contacts = () => {
                     );
                   })}
                 </>
-              </Menu.Item>
+              </div>
             </div>
-          </Menu.Items>
-        </Transition>
-      ) : (
-        ''
-      )}
-    </Menu>
+   
+    
+    </div>
   );
 };

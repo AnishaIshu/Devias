@@ -14,7 +14,7 @@ const HelpCenter = () => {
           <p className='text-sm pb-7 text-slate-500 md:pl-10 px-5 pr-8'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <hr />
           <div className='px-10 py-3 text-sm font-semibold'>
-            <div className='flex items-center gap-3 rippleButton hover:bg-zinc-100 py-2 w-36 px-3 rounded-xl cursor-pointer'>
+            <div className='flex items-center gap-3 rippleButtonDashboard hover:bg-zinc-100 py-2 w-36 px-3 rounded-lg cursor-pointer'>
              Help Center
           <AiOutlineLink className='text-xl'/>
             </div>

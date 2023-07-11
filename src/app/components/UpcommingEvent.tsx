@@ -70,7 +70,7 @@ const UpcommingEvent = [
 
 <hr />
            
-<div className='flex items-center gap-3 mt-3 ml-10 mb-5 hover:bg-zinc-100 w-24 rounded-lg rippleButton cursor-pointer px-2 py-2'>See all <GoArrowRight /></div>
+<div className='flex items-center gap-3 mt-3 ml-10 mb-5 hover:bg-zinc-100 w-24 rounded-lg rippleButtonDashboard cursor-pointer px-2 py-2'>See all <GoArrowRight /></div>
      </div> 
     </>
   )
