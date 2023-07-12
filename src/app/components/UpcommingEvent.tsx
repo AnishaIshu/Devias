@@ -34,8 +34,6 @@ const UpcommingEvent = [
         icon :   <SlCalender />
     },
 ]
-
-
   return (
     <>
      <div className='bg-[#fff] mt-8 boxShadow mx-3 md:w-[45%] rounded-3xl'>
@@ -69,8 +67,8 @@ const UpcommingEvent = [
 
 
 <hr />
-<div className='px-5 py-2 text-[13px] font-semibold'>
-            <div className='flex items-center justify-between rippleButtonDashboard hover:bg-zinc-100 py-2 w-32 px-3 rounded-lg cursor-pointer'>
+<div className='px-3 py-2 text-[13px] font-semibold'>
+            <div className='flex items-center justify-between rippleButtonDashboard hover:bg-zinc-100 py-2 w-24 px-4 rounded-lg cursor-pointer'>
           See all
           <VscArrowRight />
             </div>

@@ -1,44 +1,22 @@
 import Image from 'next/image'
 import React, { useState } from 'react'
 import { IoIosArrowDown } from "react-icons/io";
-import { motion,Variants } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 
 const MusicSubElement:any = ({ musicData }: { musicData: any}) => {
  
     const [levelDropDown, setLevelDropDown] = useState(false);
     const [dropDownIcon, setDropdownIcon] = useState(false)
-    const [isOpen, setIsOpen] = useState(false);
     const levelData = () => {
         setLevelDropDown(!levelDropDown);
         setDropdownIcon(!dropDownIcon)
     }
 
-    const [nestedList, setNestedList] = useState(false)
-    const handleList = () => {
-      setNestedList(!nestedList);
-    }
-
-    const itemVariants: Variants = {
-      open: {
-        opacity: 1,
-        y: 0,
-        transition: { type: "spring", stiffness: 300, damping: 24 }
-      },
-      closed: { opacity: 0, y: 20, transition: { duration: 0.8 } }
-    };
-
   return (
-<motion.nav onClick={levelData}  initial={false}
-animate={isOpen ? "open" : "closed"}
-className="menu">
+<motion.nav className='my-2'>
 
-
-
-      <motion.div whileTap={{ scale: 0.97 }}
-onClick={() => setIsOpen(!isOpen)}>
-
- <motion.div className='flex items-center justify-between py-2 rounded-md rippleButton hover:bg-[#303848] pr-2 cursor-pointer  my-2'> 
+ <motion.div  onClick={levelData} className='flex items-center justify-between py-2 rounded-md rippleButton hover:bg-[#303848] pr-2 cursor-pointer'> 
  
     <div className='flex gap-5'>
       <Image
@@ -53,67 +31,38 @@ onClick={() => setIsOpen(!isOpen)}>
         </h1>
     </div>
 
-
-
-     <motion.button className='text-slate-500' whileTap={{ scale: 0.97 }}
-  onClick={() => setIsOpen(!isOpen)}
-  >
-     <motion.div
-    variants={{
-      open: { rotate: 180 },
-      closed: { rotate: 0 }
-    }}
-    transition={{ duration: 0.2 }}
-    style={{ originY: 0.55 }}
-  >
+     <motion.button className='text-slate-500'>
+     <motion.div>
      {musicData.sub ? <div>{dropDownIcon ? <IoIosArrowDown/> : <div>{musicData.icon}</div>}</div> : ''}
   </motion.div>
      </motion.button>
+     </motion.div> 
 
 
 
+    <AnimatePresence>
+      {levelDropDown &&  (
+    <motion.ul  initial={{ height: 0 }}
+                  animate={{ height: "auto" }}
+                  exit={{ height: 0 }}
+                  className="overflow-hidden">
+    {musicData?.sub?.map((ele: any, index: number) => {
+                return(
+                    <div key={index}>  
+                        <li className="flex items-center justify-between px-6 my-1 rippleButton hover:bg-[#303848] rounded-lg py-1 cursor-pointer">
+                    <h1 className="text-[#9ca3af] py-1 pl-8 text-[12px]  font-semibold text-left rounded-md cursor-pointer">{ele}</h1>
+                    <div className='text-[#9ca3af]'>
+                    </div>
+                 </li>
+                  </div>
+                )
+               })} 
+    </motion.ul>
+      )
 
-     </motion.div>
+}
+</AnimatePresence>   
 
-  </motion.div>
-
-         
-<motion.ul variants={{
-              open: {
-                clipPath: "inset(0% 0% 0% 0% round 10px)",
-                transition: {
-                  type: "spring",
-                  bounce: 0,
-                  duration: 0.7,
-                  delayChildren: 0.3,
-                  staggerChildren: 0.05
-                }
-              },
-              closed: {
-                clipPath: "inset(10% 50% 90% 50% round 10px)",
-                transition: {
-                  type: "spring",
-                  bounce: 0,
-                  duration: 0.3
-                }
-              }
-            }}
-            style={{ pointerEvents: isOpen ? "auto" : "none" }} >
-
-{musicData?.sub?.map((ele: any, index: number) => {
-            return(
-                <div key={index}>
-                   {levelDropDown ?    
-                    <motion.li variants={itemVariants} className="flex items-center justify-between px-6 my-1 rippleButton hover:bg-[#303848] rounded-lg py-1 cursor-pointer">
-                <h1 className="text-[#9ca3af] py-1 pl-8 text-[12px]  font-semibold text-left rounded-md cursor-pointer">{ele}</h1>
-                <div onClick={handleList} className='text-[#9ca3af]'>
-                </div>
-             </motion.li> : ""}
-              </div>
-            )
-           })} 
-</motion.ul>
-        
      
     </motion.nav>
   )

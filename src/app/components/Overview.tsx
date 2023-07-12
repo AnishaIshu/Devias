@@ -47,7 +47,6 @@ const Overview = () => {
 <div className="md:flex md:flex-row flex-col items-center justify-between mx-5">
 {overviewData.map((item, index) => {
 
-  console.log(Image, "kjdfhjfk")
   return (
 <div key={index} className="boxShadow bg-white w-full md:w-[32%] pt-8 rounded-xl my-5">
         <div className="flex items-start pl-10 gap-5">
