@@ -63,10 +63,9 @@ const PagesSubEle: any = ({ pagesData }: { pagesData: any }) => {
     exit={{ height: 0 }}
     className="overflow-hidden" >
 {pagesData?.sub?.map((ele: any, index: number) => {
-
+console.log(pagesData, "jgjkfh")
     return (
 <div key={index}>
-
 <li  className="flex items-center justify-between my-1 px-3 rippleButton hover:bg-[#303848] rounded-lg py-1  cursor-pointer">
     <h1 className="text-[#9ca3af] pl-8 py-2 text-[12px]  font-semibold text-left rounded-md ">{ele.authName}</h1>
      <div className="text-slate-600 ">
