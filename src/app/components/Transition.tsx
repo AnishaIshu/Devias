@@ -65,7 +65,10 @@ const Transition = () => {
           <h2 className="cursor-pointer">Pending</h2>
         </div>
 
-        <div className="w-[100%] overflow-x-auto">
+
+
+
+        <div className="w-[100%] overflow-auto">
           {transitionData.map((data, index) => {
             return (
               <div
@@ -73,28 +76,28 @@ const Transition = () => {
                 className="flex items-center justify-between w-[100%] border-t py-3  px-3 md:px-10  cursor-pointer hover:bg-zinc-100"
               >
                 <div className="flex items-center gap-4 md:gap-10">
-                  <div className="bg-zinc-100 w-10 text-center rounded-2xl px-2 py-2">
+                  <div className="bg-zinc-100 w-10 text-center rounded-2xl px-1 sm:px-2 py-2">
                     <h1 className="text-[13px]">JUL</h1>
-                    <h1 className="font-bold text-[16px]">{data.date}</h1>
+                    <h1 className="font-bold sm:text-[16px] text-[12px]">{data.date}</h1>
                   </div>
                   <div>
-                    <h1 className="text-[12px] sm:text-[15px] font-semibold text-slate-700">
+                    <h1 className="text-[13px] sm:text-[15px] font-semibold text-slate-700">
                       {data.name}
                     </h1>
-                    <p className="text-[12px] sm:text-[14px] font-medium text-slate-500">
+                    <p className="text-[13px] sm:text-[14px] font-medium text-slate-500">
                       {data.p}
                     </p>
                   </div>
                 </div>
 
                 <div
-                  className={`${data.bgColor} ${data.text} px-2 py-1 text-center text-[10px] sm:text-[12px] rounded-full font-bold`}
+                  className={`${data.bgColor} ${data.text} px-2 py-1 text-center text-[8px] sm:text-[12px] rounded-full font-bold`}
                 >
                   {data.hold}
                 </div>
 
                 <div
-                  className={`${data.priceColor} w-28 text-center text-[10px] sm:text-[14px] rounded-full font-semibold`}
+                  className={`${data.priceColor} w-28 text-center text-[8px] sm:text-[14px] rounded-full font-semibold`}
                 >
                   {data.price}
                 </div>

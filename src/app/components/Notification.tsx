@@ -75,7 +75,7 @@ export const Notification = () => {
 
 
           
-            <div className={`bg-white shadow-md rounded-md absolute select-none   mx-3 z-10 top-16 lg:right-10 right-0 xl:right-[26rem] dropdownNotify ${notification ? "active" : ""}`}>
+            <div className={`bg-white shadow-md rounded-md absolute select-none   mx-3 z-10 top-16 lg:right-10 right-0 xl:right-[26rem] dropdownDiv ${notification ? "active" : ""}`}>
 
 
               <div className="flex items-center justify-between py-4 px-4">

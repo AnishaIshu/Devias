@@ -135,7 +135,7 @@
 
 
 
-.dropdownDiv {
+/* .dropdownDiv {
   transform: scale(0.5);
   opacity: 0;
   transform-origin: 180px -20px;
@@ -148,19 +148,39 @@
   transition: all 0.2s;
   opacity: 1;
   pointer-events: all;
-}
+} */
 
-.dropdownNotify {
-  transform: scale(0.7);
+
+.dropdownDiv {
+  transform: scale(0.4);
   opacity: 0;
-  transform-origin: -200px 20px;
+  transform-origin: top right;
   transition: all 0.2s;
   pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
-.dropdownNotify.active {
+
+.dropdownDiv.active {
   transform: scale(1);
-  transform-origin: -200px 20px;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.dropdownDiv {
+  transform: scale(0.5);
+  opacity: 0;
+  transform-origin: top right;
   transition: all 0.2s;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.dropdownDiv.active {
+  transform: scale(1);
   opacity: 1;
   pointer-events: all;
 }
