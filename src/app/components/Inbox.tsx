@@ -90,7 +90,7 @@ const Inbox = () => {
 
 
 <div className='px-5 py-2 text-[13px] font-semibold'>
-            <div className='flex items-center justify-between rippleButtonDashboard hover:bg-zinc-100 py-2 w-32 px-3 rounded-lg cursor-pointer'>
+            <div className='flex items-center justify-between rippleButtonDashboard hover:bg-zinc-100 py-2 w-32 px-4 rounded-lg cursor-pointer'>
             Go to Chat 
           <VscArrowRight />
             </div>

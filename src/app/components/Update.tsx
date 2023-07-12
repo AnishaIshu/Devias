@@ -8,10 +8,12 @@ const Update = () => {
   return (
     
     <>
-    <div className='md:flex boxShadow md:flex-row flex-col items-center gap-5 md:w-[65%] mx-1 mt-5 py-5 px-5 rounded-3xl shadow-sm bg-[#f2f4ff]'>
+    <div className='md:flex boxShadow mx-3 md:flex-row flex-col items-center gap-5 md:w-[65%] mt-5 py-5 px-5 rounded-3xl shadow-sm bg-[#f2f4ff]'>
         <div>
       
+      <div className='w-[200px] m-auto'>
       <Image src="/images/update/personStanding.png" className='m-auto mr-5' width={180} height={100} alt="" /> 
+      </div>
         </div>
         <div>
             <h6 className='text-[12px] text-[#6a6df8] font-semibold'>NEW V6 UPDATE</h6>
